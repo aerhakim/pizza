@@ -1,5 +1,6 @@
 package com.example.pizzaapp.client
 
+import com.example.pizzaapp.response.detailtransaksi.DetailTrxResponse
 import com.example.pizzaapp.response.login.LoginResponse
 import com.example.pizzaapp.response.menu.MenuResponse
 import com.example.pizzaapp.response.pengguna.PenggunaResponse
@@ -29,6 +30,15 @@ interface Api {
     ):Call<PenggunaResponse>
 
     @FormUrlEncoded
+    @POST("pengguna")
+    fun postPengguna(
+        @Field("username") username: String,
+        @Field("nama") nama:String,
+        @Field("level") level:String,
+        @Field("password") password: String
+    ):Call<PenggunaResponse>
+
+    @FormUrlEncoded
     @POST("transaksi")
     fun postTransaksi(
         @Field("tanggal") tanggal:String,
@@ -39,9 +49,10 @@ interface Api {
     @POST("detail_transaksi")
     fun postDetailTransaksi(
         @Field("no_transaksi") no_transaksi:Int,
+        @Field("id_makanan") id_makanan:String,
         @Field("harga") harga:Int,
-        @Field("jumlah") jumlah:Int,
-        @Field("id_makanan") id_makanan:String
-    ): Call<TransaksiResponse>
+        @Field("jumlah") jumlah:Int
+
+    ): Call<DetailTrxResponse>
 }
 

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.pizzaapp.client.RetrofitClient
@@ -25,9 +26,13 @@ class LoginActivity : AppCompatActivity() {
         //instance text
         val txtUsername:EditText = findViewById(R.id.editTextEmail)
         val txtPassword:EditText = findViewById(R.id.editTextPassword)
+        val btnSignup: TextView = findViewById(R.id.signup)
+        btnSignup.setOnClickListener {
+            val intentLogin = Intent(this, SignupActivity::class.java)
+            startActivity(intentLogin)
+        }
         //instance button login
         val btnLogin:Button = findViewById(R.id.buttonLogin)
-
         //event button login
         btnLogin.setOnClickListener {
             val email = txtUsername.text.toString().trim()

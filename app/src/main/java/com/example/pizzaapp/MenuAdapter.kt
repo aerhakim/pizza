@@ -1,9 +1,11 @@
 package com.example.pizzaapp
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.ColorSpace.Model
 import android.view.*
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +24,6 @@ class MenuAdapter(private val list: ArrayList<MenuResponse>) : RecyclerView.Adap
 
         val layoutInflater = LayoutInflater.from(parent?.context)
         val cellForRow = layoutInflater.inflate(R.layout.cardview_menu, parent, false)
-
         return MenuViewHolder(cellForRow)
     }
 
@@ -37,12 +38,14 @@ class MenuAdapter(private val list: ArrayList<MenuResponse>) : RecyclerView.Adap
         val textId:TextView
         val textHarga:TextView
         val imgMenu:ImageView
+        val btnAdd:Button
 
         init {
             textNama = v.findViewById(R.id.textNamaMenu)
             textId = v.findViewById(R.id.textViewId)
             textHarga = v.findViewById(R.id.textHargaMenu)
             imgMenu = v.findViewById(R.id.imageMenu)
+            btnAdd = v.findViewById(R.id.buttonTambah)
         }
 
         fun bind(menuResponse: MenuResponse){
@@ -58,6 +61,15 @@ class MenuAdapter(private val list: ArrayList<MenuResponse>) : RecyclerView.Adap
             Picasso.get().load(
                 RetrofitClient.IMAGES_URL +
                     gambar).into(imgMenu)
+
+            btnAdd.setOnClickListener {
+               TransaksiAdapter.jumlah = TransaksiAdapter.listId.count()
+                TransaksiAdapter.listId += id;
+                TransaksiAdapter.listNama += nama;
+                TransaksiAdapter.listHarga += harga.toInt();
+                TransaksiAdapter.listFoto += gambar;
+                TransaksiAdapter.harga = TransaksiAdapter.harga + harga.toInt();
+            }
 
         }
     }

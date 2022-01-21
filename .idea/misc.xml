@@ -3,12 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/drawable/ic_chart_white.xml" value="0.3287037037037037" />
+        <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/drawable/ic_delete_red.xml" value="0.3287037037037037" />
+        <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/activity_login.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/activity_main.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/activity_payment.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/activity_sign_upactivity.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/activity_signup.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/activity_tambah_makanan.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/activity_ubah_makanan.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/cardview_makanan.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/cardview_menu.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/cardview_transaksi.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/fragment_makanan.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/fragment_menu.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/fragment_profile.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/fragment_report.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/user/Downloads/Pizza/app/src/main/res/layout/fragment_transaction.xml" value="0.35104166666666664" />
